@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var number : Int = 0
+    @IBOutlet var countLabel : UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,11 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func plus(){
+        number += 1
+        countLabel.text = String(number)
     }
 
 
